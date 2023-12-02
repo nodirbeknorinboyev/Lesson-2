@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(63, 49, 85);
+  perspective: 300px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.content > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bir {
+  z-index: 1;
+  height: 300px;
+  width: 150px;
+  border-radius: 300px 0 0 300px;
+  background: linear-gradient(to bottom, #ee0979, #ff6a00);
+  animation: bir 3s linear infinite;
+  transform-origin: right center;
+}
+
+@keyframes bir {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    transform: translate(-50%, -50%) rotateX(180deg) rotateY(-180deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotateX(180deg) rotateY(-180deg);
+  }
+
+  80% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.ikki {
+  z-index: 2;
+  margin-top: -50px;
+  margin-left: 25px;
+  height: 100px;
+  width: 100px;
+  background: rgb(255, 255, 255);
+  border-radius: 100px 0 0 0;
+  animation-timing-function: linear;
+  animation: ikki 3s linear infinite;
+  transform-origin: bottom right;
+}
+
+.uch {
+  z-index: 5;
+  margin-top: 50px;
+  margin-left: 25px;
+  height: 100px;
+  width: 100px;
+  background: #e7e7e7;
+  border-radius: 0 0 0 100px;
+  transform-origin: top right;
+  transform-style: preserve-3d;
+  animation-name: uch;
+  transform: translate3d(1, 0, 0) rotateY(180deg);
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.turt {
+  z-index: 5;
+  margin-top: -50px;
+  margin-left: 125px;
+  height: 100px;
+  width: 100px;
+  background: #f7ce42;
+  border-radius: 0 100px 0 0;
+  transform-origin: bottom left;
+  animation-name: turt;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.besh {
+  z-index: 3;
+  margin-top: 25px;
+  margin-left: 100px;
+  height: 50px;
+  width: 50px;
+  background: #f7a500;
+  border-radius: 0 0 100px 0;
+  transform-origin: top left;
+  animation-name: besh;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.olti {
+  z-index: 4;
+  margin-top: -25px;
+  margin-left: 50px;
+  height: 50px;
+  width: 50px;
+  background: #18233e;
+  border-radius: 50%;
+  transform-origin: top left;
+  animation-name: olti;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes ikki {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  20% {
+    transform: translate(-50%, -50%) rotateX(360deg) rotateY(-180deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotateX(360deg) rotateY(-180deg);
+  }
+
+  80% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes uch {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  80% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes turt {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  80% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes besh {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  80% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes olti {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    transform: translate(-50%, -50%);
+    margin-left: 100px;
+  }
+
+  50% {
+    transform: translate(-50%, -50%);
+    margin-left: 100px;
+  }
+
+  80% {
+    transform: translate(-50%, -50%);
+    margin-left: 50px;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
